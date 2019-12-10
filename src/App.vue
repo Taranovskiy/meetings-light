@@ -4,4 +4,6 @@
   </div>
 </template>
 
-<style lang="less"></style>
+<style lang="less">
+@import "assets/styles/index.less";
+</style>
