@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
 
 Vue.use(VueRouter);
 
@@ -8,14 +7,12 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home,
+    redirect: 'meetings',
   },
   {
     path: '/meetings',
     name: 'meetings',
-    meta: {
-      layout: 'main',
-    },
+    meta: { layout: 'main' },
     component: () =>
       import(/* webpackChunkName: "meetings" */ '../views/Meetings.vue'),
   },
